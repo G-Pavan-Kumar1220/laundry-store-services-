@@ -110,29 +110,30 @@ function emailsend() {
     let email = document.querySelector('.email1').value;
     let phone = document.querySelector('.ph1').value;
 
-    // Example of your cart or services (array or object)
-    // You can replace this with your actual `cart` variable
-    let cart = [
-        { service: "Book Printing", price: "$50" },
-        { service: "Book Binding", price: "$30" },
-        { service: "Delivery", price: "$10" }
-    ];
+    // ✅ Use actual cart and totalAmount
+    if (cart.length === 0) {
+        alert("No items in the cart to send.");
+        return;
+    }
 
-    // Format the services neatly into a string
+    // ✅ Format all cart items
     let serviceList = cart
-        .map((item, index) => `${index + 1}. ${item.service} - ${item.price}`)
+        .map((item, index) => `${index + 1}. ${item.name} - ₹${item.price.toFixed(2)}`)
         .join('\n');
 
-    // EmailJS parameters
+    // ✅ Add total amount at the end
+    serviceList += `\n\nTotal Amount: ₹${totalAmount.toFixed(2)}`;
+
+    // ✅ EmailJS parameters
     let param = {
         name: name,
         email: email,
         phone: phone,
-        message: serviceList,  // 👈 sends all services
-        subject: "Your Book Services Details"
+        message: serviceList,  // 👈 sends all services + total
+        subject: "Your Selected Laundry Services Summary"
     };
 
-    // Send email using EmailJS
+    // ✅ Send email using EmailJS
     emailjs.send('service_vbywb3o', 'template_lb75s5n', param)
         .then((response) => {
             console.log('✅ SUCCESS!', response.status, response.text);
@@ -143,6 +144,7 @@ function emailsend() {
             alert("Something went wrong. Please try again.");
         });
 }
+
 
 
 
@@ -217,3 +219,4 @@ function drycleaning() {
     const button = document.querySelector('#btn1');
     toggleCart('DryCleaning', button);
 }
+
