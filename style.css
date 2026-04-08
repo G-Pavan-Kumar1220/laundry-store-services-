@@ -13,6 +13,10 @@ body{
     background-color:#f5f5f5;
 
 }
+.header-stickey{
+    top: 0;
+    position: sticky;
+}
 header{
     margin: 0 auto;
     height: 60px;
@@ -501,4 +505,682 @@ footer{
 .cart-btn-check1{
     color: green;
     margin-left: 20%;
+}
+
+/* ================= MOBILE RESPONSIVE FIX ================= */
+@media (max-width: 768px) {
+
+  /* Global spacing system */
+  body {
+    padding: 0 16px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+  .header-stickey{
+    position: unset;
+  }
+
+  /* Header */
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+    gap: 10px;
+  }
+
+  .header-stickey {
+    position: static;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .service-links ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .username p {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* Hero Section */
+  .main-section {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .left h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .washing-machine {
+    width: 90%;
+    height: auto;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto 0;
+  }
+
+  /* Achievements */
+  .our-achivements-section {
+    flex-direction: column;
+    height: auto;
+    padding: 25px 10px;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .div, .div1 {
+    border: none;
+    padding: 0;
+  }
+
+  /* Services Section */
+  .our-services {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .left-section {
+    padding: 15px;
+  }
+
+  .left-head {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  .service {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .service button {
+    width: 100%;
+  }
+
+  /* Cart Section */
+  .service-top,
+  .service-bottom {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .cart-items {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .total-amount {
+    margin: 20px 0;
+  }
+
+  /* Form */
+  .name,
+  .ph1,
+  .email1 {
+    width: 100%;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .book-btn1 {
+    width: 100%;
+  }
+
+  /* Subscription Section */
+  .subscription-section {
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  .sub-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .subscribe {
+    width: 100%;
+  }
+
+  .subscribe h1 {
+    font-size: 28px;
+    float: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .sub-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .sub-bottom-details {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .sub-bottom-input,
+  .sub-bottom-input-email,
+  .sub-bottom-button {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer1 {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: 30px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE RESPONSIVE — Laundry Services
+   Only affects screens ≤ 768px. Desktop styles untouched.
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* ── Global ── */
+  body {
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+  }
+
+  /* ── Header ── */
+  .header-stickey {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .header-stickey{
+
+    position: unset;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 14px 20px 12px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .service-links ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 18px;
+    padding: 0;
+  }
+
+  .service-links ul li a {
+    font-size: 13px;
+  }
+
+  .username p {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  /* ── Hero Section ── */
+  .main-section {
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 30px 20px 24px;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .left h1 {
+    font-size: 26px;
+    line-height: 1.35;
+  }
+
+  .left p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 12px;
+  }
+
+  .left p br,
+  .left h1 br {
+    display: none;
+  }
+
+  .button {
+    width: 220px;
+    height: 46px;
+    margin: 18px auto 0;
+    font-size: 13px;
+  }
+
+  .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .washing-machine {
+    width: 88%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /* ── Achievements Bar ── */
+  .our-achivements-section {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 22px 16px;
+    gap: 16px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .our-achivements-section > h1 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .div,
+  .div1 {
+    border: none;
+    padding: 0;
+    flex: 1 1 100px;
+    min-width: 100px;
+  }
+
+  .our-achivements-section h1 {
+    font-size: 22px;
+  }
+
+  /* ── Services Section ── */
+  .our-services {
+    height: auto;
+    padding: 0 14px 40px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .service-box {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    gap: 14px;
+  }
+
+  /* Left panel */
+  .left-section {
+    width: 100%;
+    border-radius: 16px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  .left-head {
+    margin: 16px 20px 0;
+    text-align: left;
+  }
+
+  .left-head h1 {
+    font-size: 20px;
+  }
+
+  .left-head p {
+    font-size: 12px;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .left-head::after {
+    width: 100%;
+    margin: 16px 0 0;
+  }
+
+  .services-list {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .service {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 16px;
+    gap: 8px;
+  }
+
+  .service-in {
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .service-in p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .small-image {
+    height: 26px;
+    flex-shrink: 0;
+  }
+
+  .service button {
+    width: 110px;
+    padding: 8px 6px;
+    font-size: 11px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .note {
+    margin: 8px 16px 0;
+  }
+
+  .note p {
+    font-size: 12px;
+  }
+
+  /* Right panel */
+  .right-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .service-top {
+    margin: 0;
+    border-radius: 16px;
+    padding: 16px;
+    height: auto;
+  }
+
+  .cart-hd h1 {
+    font-size: 20px;
+    padding-top: 6px;
+  }
+
+  .cart-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    background-color: #f5f5f5;
+  }
+
+  .cart-items span {
+    padding-right: 20px;
+    font-size: 12px;
+  }
+
+  .cart-list {
+    height: auto;
+    min-height: 80px;
+  }
+
+  .cartItemList {
+    padding: 4px 0;
+  }
+
+  .total-amount {
+    margin: 14px 0 0;
+  }
+
+  .total-amount h1 {
+    font-size: 18px;
+  }
+
+  .total-amount p {
+    font-size: 16px;
+  }
+
+  /* Booking form */
+  .service-bottom {
+    margin: 0;
+    border-radius: 16px;
+    padding: 16px;
+    height: auto;
+  }
+
+  .service-bottom h1 {
+    font-size: 18px;
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
+
+  .service-bottom p span {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .name {
+    margin: 6px 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .email1,
+  .ph1 {
+    width: 100%;
+    box-sizing: border-box;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .book-btn {
+    margin: 14px 0 0;
+    height: auto;
+  }
+
+  .book-btn1 {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    border-radius: 10px;
+    opacity: 1;
+  }
+
+  .cart-btn-check,
+  .cart-btn-check1 {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 12px;
+  }
+
+  /* ── Features / Subscription Section ── */
+  .subscription-section {
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .sub-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 24px 16px;
+    height: auto;
+    text-align: center;
+  }
+
+  .subscription {
+    width: 100%;
+  }
+
+  .sun-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub-img {
+    height: 52px;
+    margin-bottom: 8px;
+  }
+
+  .sun-in h1 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .sun-in p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .sub-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0 16px 24px;
+  }
+
+  .subscribe {
+    width: 100%;
+    height: auto;
+  }
+
+  .subscribe h1 {
+    font-size: 20px;
+    float: none;
+    padding: 20px 0 10px;
+    text-align: center;
+    color: white;
+  }
+
+  .sub-bottom-details {
+    width: 100%;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    padding: 0;
+  }
+
+  .sub-bottom-input,
+  .sub-bottom-input-email {
+    width: 100%;
+    box-sizing: border-box;
+    height: 46px;
+    font-size: 15px;
+  }
+
+  .sub-bottom-button {
+    width: 100%;
+    height: 48px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  /* ── Footer ── */
+  footer {
+    height: auto;
+  }
+
+  .footer1 {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+    padding: 30px 20px;
+  }
+
+  .footer-logo {
+    font-size: 26px;
+    padding: 0 0 10px;
+  }
+
+  .footer-aboutus {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .footer-in h1 {
+    font-size: 15px;
+    padding-bottom: 12px;
+  }
+
+  .footer-in p {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .footer-social-media-logo {
+    height: 24px;
+    padding: 4px;
+  }
+}
+
+/* ── Extra small phones ── */
+@media (max-width: 375px) {
+
+  .left h1 {
+    font-size: 22px;
+  }
+
+  .sub-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer1 {
+    grid-template-columns: 1fr;
+  }
+
+  .service button {
+    width: 96px;
+    font-size: 10px;
+  }
+
+  .service-in p {
+    font-size: 11px;
+  }
 }
